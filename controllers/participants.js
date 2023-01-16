@@ -1,3 +1,5 @@
+const db = require('../config/mysqlConn')
+
 exports.update = (req, res, next) => {
   const { participant_telephone, participant_code } = req.body
   const sql = `UPDATE participants SET participant_telephone = ? WHERE participant_code = ?`

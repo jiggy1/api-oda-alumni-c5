@@ -1,10 +1,11 @@
 const express = require('express')
-const db = require('./config/mysqlConn')
+const cors = require('cors')
 const participantsRoutes = require('./routes/participants')
 
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.use('/api/participants', participantsRoutes)
 

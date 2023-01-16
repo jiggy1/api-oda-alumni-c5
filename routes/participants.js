@@ -3,6 +3,6 @@ const participantsCtlr = require('../controllers/participants')
 
 const router = express.Router()
 
-router.put('/api/participants', participantsCtlr.update)
+router.put('/', participantsCtlr.update)
 
 module.exports = router
